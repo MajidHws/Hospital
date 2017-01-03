@@ -1,0 +1,63 @@
+<html dir="rtl">
+
+<ion-header>
+  <ion-navbar color="primary">
+
+    <ion-title>
+      مستشفى العيون
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button (click)="showAlert();" royal>
+        <ion-icon name="basket"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button royal (click)="showPvr()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card (click)="openGallary()">
+    <img src="http://lorempixel.com/600/400/city"/>
+    <ion-card-content align="center">
+      <h2>
+        معرض الصور 
+        <ion-icon name="images"></ion-icon>
+      </h2>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row align="center">
+
+      <ion-col width-33 (click)="showDoctorsPage()">
+        <p>
+          <img class="img-circle" src="http://lorempixel.com/400/300/people" />
+        </p>
+        <h5>الأطباء</h5>
+      </ion-col>
+
+      <ion-col width-33>
+        <p>
+          <img class="img-circle" src="http://lorempixel.com/400/300/transport" />
+        </p>
+        <h5>الخدمات</h5>
+      </ion-col>
+
+      <ion-col width-33 (click)="showToast()">
+        <p>
+          <img class="img-circle" src="http://lorempixel.com/400/300/technics" />
+        </p>
+        <h5>العروض</h5>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
